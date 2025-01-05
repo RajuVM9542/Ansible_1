@@ -1,0 +1,13 @@
+---
+- hosts: mywebserver
+  become: yes
+  tasks:
+  - name: install git
+    apt:
+     name: "{{mygit}}"
+     state: present
+
+  - name: install apache2
+    apt:
+     name: "{{myapache2}}"
+     state: present
